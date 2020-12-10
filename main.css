@@ -2,6 +2,10 @@
   font-family: "Open Sans", sans-serif;
 }
 
+body {
+  background-color: #fbfbfd;
+}
+
 a.nav-link {
   /* letter-spacing: 0.01em; */
 }
