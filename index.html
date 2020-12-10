@@ -21,7 +21,7 @@
   </head>
   <body>
     <div class="row">
-      <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+      <nav class="navbar navbar-expand-sm navbar-dark bg-dark shadow-sm">
         <button
           class="navbar-toggler"
           type="button"
@@ -50,7 +50,9 @@
             <li class="nav-item">
               <a class="nav-link" href="#">About</a>
             </li>
+          </ul>
 
+          <ul class="navbar-nav mb-2 mb-lg-0">
             <li class="nav-item">
               <a href="#" class="nav-link cart">
                 <svg
@@ -73,6 +75,25 @@
                 </svg>
               </a>
             </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link user">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-user"
+                >
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+              </a>
+            </li>
           </ul>
         </div>
       </nav>
@@ -82,7 +103,9 @@
       <div class="row">
         <div class="col-md-8 mt-5">
           <div class="container">
-            <div class="row row-cols-3">
+            <h1 class="display-6 font-weight-bold">Izdvajamo iz ponude</h1>
+            <hr />
+            <div class="row row-cols-3 mt-4">
               <div class="col">
                 <div
                   data-aos="fade-up"

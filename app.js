@@ -8,3 +8,8 @@ function showCart() {
   //   document.querySelector(".sidebar").removeAttribute("hidden");
   document.querySelector(".sidebar").classList.toggle("cart-sidebar");
 }
+
+// function showUser() {
+//     //   document.querySelector(".sidebar").removeAttribute("hidden");
+//     document.querySelector(".sidebar").classList.toggle("cart-sidebar");
+//   }
