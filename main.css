@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color: #f3f3f3;
+  background-color: #fff;
 }
 
 a.nav-link {
@@ -434,25 +434,32 @@ svg.feather-shopping-bag:hover {
 .card-img-top {
   object-fit: cover;
   background-size: cover;
-  /* width: 300px;
-  height: 300px; */
+  min-width: 259px;
+  max-width: 259px;
+
+  max-height: 259px;
+  min-height: 259px;
 }
 
 .card {
   border-radius: 8px;
+  border: none;
+  background: none;
 }
 
 .card-title {
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .card-body {
   flex: 1 1 auto;
-  padding: 2rem 0rem 2rem;
+  padding: 1.3rem 0rem 1.3rem;
 }
 
 .btn.btn-secondary.btn-block {
   padding: 5px 16px;
+  padding-right: 2.5rem;
+  padding-left: 2.5rem;
 }
 
 .price {
@@ -487,9 +494,9 @@ svg.feather-shopping-bag:hover {
   display: inline-block;
   /* font-family: Corporate Rounded Voli Bold,sans-serif; */
   font-size: 30px;
-  color: #0c3653;
+  color: #2c3335;
   text-align: center;
-  background: #f3f3f3;
+  /* background: #f3f3f3; */
   padding: 0 1rem;
 }
 
