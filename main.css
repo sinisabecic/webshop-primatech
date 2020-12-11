@@ -431,20 +431,28 @@ svg.feather-shopping-bag:hover {
   padding-right: 2rem; */
 }
 
-.card-img-top {
-  object-fit: cover;
-  background-size: cover;
-  min-width: 259px;
-  max-width: 259px;
-
-  max-height: 259px;
-  min-height: 259px;
-}
-
 .card {
+  position: relative;
   border-radius: 8px;
   border: none;
-  background: none;
+  display: block;
+  width: 261px;
+  height: 403.59px;
+
+  /* max-width: 261px;
+  max-height: 403.59px; */
+}
+
+.inner {
+  overflow: hidden;
+}
+
+.card-img-top {
+  display: block;
+  object-fit: cover;
+  background-size: cover;
+  width: 261px;
+  height: 261px;
 }
 
 .card-title {
@@ -454,6 +462,9 @@ svg.feather-shopping-bag:hover {
 .card-body {
   flex: 1 1 auto;
   padding: 1.3rem 0rem 1.3rem;
+  overflow: hidden;
+  position: relative;
+  display: block;
 }
 
 .btn.btn-secondary.btn-block {
