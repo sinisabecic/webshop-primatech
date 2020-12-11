@@ -438,6 +438,10 @@ svg.feather-shopping-bag:hover {
   height: 300px; */
 }
 
+.card {
+  border-radius: 8px;
+}
+
 .card-title {
   font-size: 20px;
 }
@@ -457,12 +461,12 @@ svg.feather-shopping-bag:hover {
   color: #2c3335;
 }
 
-.shadow-md {
+/* .shadow-md {
   --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
     var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
+} */
 
 .shadow-md:hover {
   --tw-shadow: 0 6px 8px 0px rgba(0, 0, 0, 0.1),
