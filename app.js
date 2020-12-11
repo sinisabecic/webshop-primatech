@@ -1,15 +1,23 @@
 //* Korpa sidebar
 
 // LISTENERS
-document.querySelector(".cart").addEventListener("click", showCart);
+// document.querySelector(".cart").addEventListener("click", showCart);
+document.querySelector("#search-input").addEventListener("click", searchShow);
+
+document
+  .querySelector(".search-overlay")
+  .addEventListener("click", searchClose);
 
 // FUNCTIONS
-function showCart() {
-  //   document.querySelector(".sidebar").removeAttribute("hidden");
-  document.querySelector(".sidebar").classList.toggle("cart-sidebar");
+
+function searchShow() {
+  document.querySelector(".search-overlay").classList.toggle("open");
+  document.querySelector(".search-results").toggleAttribute("hidden");
+}
+function searchClose() {
+  document.querySelector(".search-overlay").classList.remove("open");
+  document.querySelector(".search-results").toggleAttribute("hidden");
 }
 
-// function showUser() {
-//     //   document.querySelector(".sidebar").removeAttribute("hidden");
-//     document.querySelector(".sidebar").classList.toggle("cart-sidebar");
-//   }
+//* Karusel
+tns();
