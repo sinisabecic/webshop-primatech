@@ -125,12 +125,12 @@ body.overflow-hidden {
   -webkit-transition: right 0.3s;
   -moz-transition: right 0.3s;
   transition: right 0.3s;
-  top: auto; /*todo Dodato */
+  top: 80px; /*todo Dodato */
 }
 
 #cd-cart.speed-in {
   right: 0;
-  top: auto; /*todo Dodato */
+  top: 80px; /*todo Dodato */
 }
 #cd-cart > * {
   padding: 0 1em;
@@ -680,7 +680,7 @@ svg.feather-shopping-bag:hover {
 /** PRODUCT CARD */
 
 .popular-products {
-  margin-top: 3.5rem !important;
+  margin-top: 7.5rem !important;
 }
 
 .single-col {
