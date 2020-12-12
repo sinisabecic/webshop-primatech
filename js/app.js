@@ -20,4 +20,4 @@ function searchClose() {
 }
 
 //* Karusel
-tns();
+// tns();
