@@ -117,10 +117,8 @@ const ItemCtrl = (function () {
         return item.id;
       });
 
-      //* Daj mi poziciju onog kojeg sam trazio
       const index = ids.indexOf(id);
 
-      //* Remove item
       //? Brisanje elemenata iz niza
       data.items.splice(index, 1);
     },
@@ -221,8 +219,6 @@ const UICtrl = (function () {
     },
   };
 })();
-
-//todo !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 //! App controller
 //? glavni kontroler koji ce pozivati ove druge kontrolere
