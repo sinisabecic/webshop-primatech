@@ -260,7 +260,7 @@ body.overflow-hidden {
   width: 100%;
   top: 0;
   left: 0;
-  background: rgba(67, 87, 121, 0.6);
+  background: rgba(0, 0, 0, 0.5);
   cursor: pointer;
   z-index: 2;
   display: none;

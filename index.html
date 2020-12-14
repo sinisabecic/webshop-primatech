@@ -25,6 +25,15 @@
 
     <link rel="stylesheet" href="css/main.css" />
 
+    <!-- JavaScript -->
+    <script src="js/alertify.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/alertify.min.css" />
+
+    <!-- Bootstrap theme -->
+    <link rel="stylesheet" href="css/themes/bootstrap.min.css" />
+
     <!-- Gem style -->
     <script src="js/modernizr.js"></script>
   </head>
@@ -236,13 +245,13 @@
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    class="feather feather-shopping-bag"
+                    class="feather feather-shopping-cart"
                   >
+                    <circle cx="9" cy="21" r="1"></circle>
+                    <circle cx="20" cy="21" r="1"></circle>
                     <path
-                      d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"
-                    />
-                    <line x1="3" y1="6" x2="21" y2="6" />
-                    <path d="M16 10a4 4 0 0 1-8 0" />
+                      d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
+                    ></path>
                   </svg>
                 </div>
               </a>
@@ -257,38 +266,27 @@
 
     <div id="cd-cart">
       <h2>Korpa</h2>
-      <ul class="cd-cart-items">
-        <li>
-          <span class="cd-qty">1x</span>
-          <a href="#" class="cd-title">EWE PC INTEL</a>
-          <div class="cd-price">583.60&euro;</div>
-          <a href="#0" class="cd-item-remove cd-img-replace">Ukloni</a>
-        </li>
-
-        <li>
-          <span class="cd-qty">1x</span>
-          <a href="#" class="cd-title">PIN Montenegro PIN</a>
-          <div class="cd-price">174.10&euro;</div>
-          <a href="#0" class="cd-item-remove cd-img-replace">Ukloni</a>
-        </li>
-
-        <li>
-          <span class="cd-qty">1x</span>
-          <a href="#" class="cd-title">Sony Playstation 4</a>
-          <div class="cd-price">372.40&euro;</div>
-          <a href="#0" class="cd-item-remove cd-img-replace">Ukloni</a>
-        </li>
+      <ul id="item-list" class="cd-cart-items">
+        <!-- <li class="cd-cart-items collection-item" data-id="0">
+          <span class="cd-qty"></span>
+          <a href="#" class="cd-title"></a>
+          <div class="cd-price"><span></span> &euro;</div>
+          <a href="#" class="cd-item-remove">Ukloni</a>
+        </li> -->
       </ul>
       <!-- cd-cart-items -->
 
       <div class="cd-cart-total">
         <!-- <p class="cd-pdv small text-danger">PDV:<span>19%</span></p> -->
-        <p class="cd-full-price">Ukupna cijena:<span>1130&euro;</span></p>
+        <p class="cd-full-price">
+          Ukupna cijena:<span class="cd-total-price">0 </span
+          ><span> &euro;</span>
+        </p>
         <p class="small cd-pdv">PDV je uračunat u cijenu</p>
       </div>
       <!-- cd-cart-total -->
 
-      <a href="#0" class="checkout-btn">Plati</a>
+      <a href="#" class="checkout-btn">Plati</a>
 
       <!-- <p class="cd-go-to-cart"><a href="#0">Idi na stranicu korpe</a></p> -->
     </div>
@@ -303,8 +301,8 @@
         <div class="text-center">
           <h2 class="section-title mb-4">Popularni proizvodi</h2>
         </div>
-        <div class="row row-cols-sm-1 row-cols-md-4 text-center">
-          <div class="col-sm-1 single-col justify-content-center">
+        <div id="item-list" class="row row-cols-sm-1 row-cols-md-4 text-center">
+          <div class="col-sm-1 single-col">
             <div
               data-aos="fade-up"
               data-aos-duration="500"
@@ -326,57 +324,24 @@
               <div class="card-body">
                 <!-- Title -->
                 <h4 class="card-title font-weight-bold text-gray-600">
-                  <a>PIN Montenegro PIN</a>
+                  <a>Jostick</a>
                 </h4>
 
-                <p class="mb-2 price">&euro; 174.10</p>
+                <p class="mb-2 price">74.10 <span>&euro;</span></p>
                 <!-- Text -->
                 <p class="card-text"></p>
                 <!-- Button -->
-                <a href="#" class="btn btn-secondary btn-block"
-                  >Dodaj u korpu</a
+                <button
+                  id="add-to-cart-btn"
+                  class="btn btn-secondary btn-block"
                 >
+                  Dodaj u korpu
+                </button>
               </div>
             </div>
             <!-- Card -->
           </div>
-          <div class="col-sm-1 single-col">
-            <div
-              data-aos="fade-up"
-              data-aos-duration="500"
-              class="card booking-card shadow-md"
-            >
-              <!-- Card image -->
-              <div class="inner">
-                <img
-                  class="card-img-top"
-                  src="images/joystick 2.jpg"
-                  alt="Card image cap"
-                />
-                <a href="#!">
-                  <div class="mask rgba-white-slight"></div>
-                </a>
-              </div>
 
-              <!-- Card content -->
-              <div class="card-body">
-                <!-- Title -->
-                <h4 class="card-title font-weight-bold text-gray-600">
-                  <a>EWE PC INTEL </a>
-                </h4>
-                <!-- <p class="lead">i5-9400F/8GB/256GB/RX5500 XT 4GB</p> -->
-
-                <p class="mb-2 price">&euro; 583.60</p>
-                <!-- Text -->
-                <p class="card-text"></p>
-                <!-- Button -->
-                <a href="#" class="btn btn-secondary btn-block"
-                  >Dodaj u korpu</a
-                >
-              </div>
-            </div>
-            <!-- Card -->
-          </div>
           <div class="col-sm-1 single-col">
             <div
               data-aos="fade-up"
@@ -387,42 +352,6 @@
               <div class="inner">
                 <img
                   class="card-img-top"
-                  src="images/macbook.jpg"
-                  alt="Card image cap"
-                />
-                <a href="#!">
-                  <div class="mask rgba-white-slight"></div>
-                </a>
-              </div>
-
-              <!-- Card content -->
-              <div class="card-body">
-                <!-- Title -->
-                <h4 class="card-title font-weight-bold text-gray-600">
-                  <a>Vivax sat</a>
-                </h4>
-
-                <p class="mb-2 price">&euro; 35.00</p>
-                <!-- Text -->
-                <p class="card-text"></p>
-                <!-- Button -->
-                <a href="#" class="btn btn-secondary btn-block"
-                  >Dodaj u korpu</a
-                >
-              </div>
-            </div>
-            <!-- Card -->
-          </div>
-          <div class="col-sm-1 single-col">
-            <div
-              data-aos="fade-up"
-              data-aos-duration="500"
-              class="card booking-card shadow-md"
-            >
-              <!-- Card image -->
-              <div class="inner">
-                <img
-                  class="card-img-top"
                   src="images/sony.jpg"
                   alt="Card image cap"
                 />
@@ -435,31 +364,35 @@
               <div class="card-body">
                 <!-- Title -->
                 <h4 class="card-title font-weight-bold text-gray-600">
-                  <a>Sony Playstation 4</a>
+                  <a>Sony</a>
                 </h4>
 
-                <p class="mb-2 price">&euro; 372.40</p>
+                <p class="mb-2 price">74.10 <span>&euro;</span></p>
                 <!-- Text -->
                 <p class="card-text"></p>
                 <!-- Button -->
-                <a href="#" class="btn btn-secondary btn-block"
-                  >Dodaj u korpu</a
+                <button
+                  id="add-to-cart-btn"
+                  class="btn btn-secondary btn-block"
                 >
+                  Dodaj u korpu
+                </button>
               </div>
             </div>
             <!-- Card -->
           </div>
+
           <div class="col-sm-1 single-col">
             <div
               data-aos="fade-up"
               data-aos-duration="500"
-              class="card booking-card shadow-md"
+              class="card shadow-md"
             >
               <!-- Card image -->
               <div class="inner">
                 <img
                   class="card-img-top"
-                  src="images/joystick.jpg"
+                  src="images/joystick 3.jpg"
                   alt="Card image cap"
                 />
                 <a href="#!">
@@ -471,31 +404,35 @@
               <div class="card-body">
                 <!-- Title -->
                 <h4 class="card-title font-weight-bold text-gray-600">
-                  <a>SONY PlayStation 4 Controller</a>
+                  <a>Jostick</a>
                 </h4>
 
-                <p class="mb-2 price">&euro; 62.10</p>
+                <p class="mb-2 price">74.10 <span>&euro;</span></p>
                 <!-- Text -->
                 <p class="card-text"></p>
                 <!-- Button -->
-                <a href="#" class="btn btn-secondary btn-block"
-                  >Dodaj u korpu</a
+                <button
+                  id="add-to-cart-btn"
+                  class="btn btn-secondary btn-block"
                 >
+                  Dodaj u korpu
+                </button>
               </div>
             </div>
             <!-- Card -->
           </div>
+
           <div class="col-sm-1 single-col">
             <div
               data-aos="fade-up"
               data-aos-duration="500"
-              class="card booking-card shadow-md"
+              class="card shadow-md"
             >
               <!-- Card image -->
               <div class="inner">
                 <img
                   class="card-img-top"
-                  src="images/kuciste.jpg"
+                  src="images/joystick 3.jpg"
                   alt="Card image cap"
                 />
                 <a href="#!">
@@ -507,31 +444,35 @@
               <div class="card-body">
                 <!-- Title -->
                 <h4 class="card-title font-weight-bold text-gray-600">
-                  <a>PIN Montenegro PIN</a>
+                  <a>Jostick</a>
                 </h4>
 
-                <p class="mb-2 price">&euro; 174.10</p>
+                <p class="mb-2 price">74.10 <span>&euro;</span></p>
                 <!-- Text -->
                 <p class="card-text"></p>
                 <!-- Button -->
-                <a href="#" class="btn btn-secondary btn-block"
-                  >Dodaj u korpu</a
+                <button
+                  id="add-to-cart-btn"
+                  class="btn btn-secondary btn-block"
                 >
+                  Dodaj u korpu
+                </button>
               </div>
             </div>
             <!-- Card -->
           </div>
+
           <div class="col-sm-1 single-col">
             <div
               data-aos="fade-up"
               data-aos-duration="500"
-              class="card booking-card shadow-md"
+              class="card shadow-md"
             >
               <!-- Card image -->
               <div class="inner">
                 <img
                   class="card-img-top"
-                  src="images/RAC17631_v.jpg"
+                  src="images/joystick 3.jpg"
                   alt="Card image cap"
                 />
                 <a href="#!">
@@ -543,32 +484,35 @@
               <div class="card-body">
                 <!-- Title -->
                 <h4 class="card-title font-weight-bold text-gray-600">
-                  <a>EWE PC INTEL </a>
+                  <a>Jostick</a>
                 </h4>
-                <!-- <p class="lead">i5-9400F/8GB/256GB/RX5500 XT 4GB</p> -->
 
-                <p class="mb-2 price">&euro; 583.60</p>
+                <p class="mb-2 price">74.10 <span>&euro;</span></p>
                 <!-- Text -->
                 <p class="card-text"></p>
                 <!-- Button -->
-                <a href="#" class="btn btn-secondary btn-block"
-                  >Dodaj u korpu</a
+                <button
+                  id="add-to-cart-btn"
+                  class="btn btn-secondary btn-block"
                 >
+                  Dodaj u korpu
+                </button>
               </div>
             </div>
             <!-- Card -->
           </div>
+
           <div class="col-sm-1 single-col">
             <div
               data-aos="fade-up"
               data-aos-duration="500"
-              class="card booking-card shadow-md"
+              class="card shadow-md"
             >
               <!-- Card image -->
               <div class="inner">
                 <img
                   class="card-img-top"
-                  src="images/sat.jpg"
+                  src="images/joystick 3.jpg"
                   alt="Card image cap"
                 />
                 <a href="#!">
@@ -580,31 +524,35 @@
               <div class="card-body">
                 <!-- Title -->
                 <h4 class="card-title font-weight-bold text-gray-600">
-                  <a>Vivax sat</a>
+                  <a>Jostick</a>
                 </h4>
 
-                <p class="mb-2 price">&euro; 35.00</p>
+                <p class="mb-2 price">74.10 <span>&euro;</span></p>
                 <!-- Text -->
                 <p class="card-text"></p>
                 <!-- Button -->
-                <a href="#" class="btn btn-secondary btn-block"
-                  >Dodaj u korpu</a
+                <button
+                  id="add-to-cart-btn"
+                  class="btn btn-secondary btn-block"
                 >
+                  Dodaj u korpu
+                </button>
               </div>
             </div>
             <!-- Card -->
           </div>
+
           <div class="col-sm-1 single-col">
             <div
               data-aos="fade-up"
               data-aos-duration="500"
-              class="card booking-card shadow-md"
+              class="card shadow-md"
             >
               <!-- Card image -->
               <div class="inner">
                 <img
                   class="card-img-top"
-                  src="images/sony.jpg"
+                  src="images/joystick 3.jpg"
                   alt="Card image cap"
                 />
                 <a href="#!">
@@ -616,31 +564,35 @@
               <div class="card-body">
                 <!-- Title -->
                 <h4 class="card-title font-weight-bold text-gray-600">
-                  <a>Sony Playstation 4</a>
+                  <a>Jostick</a>
                 </h4>
 
-                <p class="mb-2 price">&euro; 372.40</p>
+                <p class="mb-2 price">74.10 <span>&euro;</span></p>
                 <!-- Text -->
                 <p class="card-text"></p>
                 <!-- Button -->
-                <a href="#" class="btn btn-secondary btn-block"
-                  >Dodaj u korpu</a
+                <button
+                  id="add-to-cart-btn"
+                  class="btn btn-secondary btn-block"
                 >
+                  Dodaj u korpu
+                </button>
               </div>
             </div>
             <!-- Card -->
           </div>
+
           <div class="col-sm-1 single-col">
             <div
               data-aos="fade-up"
               data-aos-duration="500"
-              class="card booking-card shadow-md"
+              class="card shadow-md"
             >
               <!-- Card image -->
               <div class="inner">
                 <img
                   class="card-img-top"
-                  src="images/joystick.jpg"
+                  src="images/joystick 3.jpg"
                   alt="Card image cap"
                 />
                 <a href="#!">
@@ -652,31 +604,35 @@
               <div class="card-body">
                 <!-- Title -->
                 <h4 class="card-title font-weight-bold text-gray-600">
-                  <a>SONY PlayStation 4 Controller</a>
+                  <a>Jostick</a>
                 </h4>
 
-                <p class="mb-2 price">&euro; 62.10</p>
+                <p class="mb-2 price">74.10 <span>&euro;</span></p>
                 <!-- Text -->
                 <p class="card-text"></p>
                 <!-- Button -->
-                <a href="#" class="btn btn-secondary btn-block"
-                  >Dodaj u korpu</a
+                <button
+                  id="add-to-cart-btn"
+                  class="btn btn-secondary btn-block"
                 >
+                  Dodaj u korpu
+                </button>
               </div>
             </div>
             <!-- Card -->
           </div>
+
           <div class="col-sm-1 single-col">
             <div
               data-aos="fade-up"
               data-aos-duration="500"
-              class="card booking-card shadow-md"
+              class="card shadow-md"
             >
               <!-- Card image -->
               <div class="inner">
                 <img
                   class="card-img-top"
-                  src="images/kuciste.jpg"
+                  src="images/joystick 3.jpg"
                   alt="Card image cap"
                 />
                 <a href="#!">
@@ -688,31 +644,35 @@
               <div class="card-body">
                 <!-- Title -->
                 <h4 class="card-title font-weight-bold text-gray-600">
-                  <a>PIN Montenegro PIN</a>
+                  <a>Jostick</a>
                 </h4>
 
-                <p class="mb-2 price">&euro; 174.10</p>
+                <p class="mb-2 price">74.10 <span>&euro;</span></p>
                 <!-- Text -->
                 <p class="card-text"></p>
                 <!-- Button -->
-                <a href="#" class="btn btn-secondary btn-block"
-                  >Dodaj u korpu</a
+                <button
+                  id="add-to-cart-btn"
+                  class="btn btn-secondary btn-block"
                 >
+                  Dodaj u korpu
+                </button>
               </div>
             </div>
             <!-- Card -->
           </div>
+
           <div class="col-sm-1 single-col">
             <div
               data-aos="fade-up"
               data-aos-duration="500"
-              class="card booking-card shadow-md"
+              class="card shadow-md"
             >
               <!-- Card image -->
               <div class="inner">
                 <img
                   class="card-img-top"
-                  src="images/RAC17631_v.jpg"
+                  src="images/joystick 3.jpg"
                   alt="Card image cap"
                 />
                 <a href="#!">
@@ -724,125 +684,19 @@
               <div class="card-body">
                 <!-- Title -->
                 <h4 class="card-title font-weight-bold text-gray-600">
-                  <a>EWE PC INTEL </a>
+                  <a>Jostick</a>
                 </h4>
-                <!-- <p class="lead">i5-9400F/8GB/256GB/RX5500 XT 4GB</p> -->
 
-                <p class="mb-2 price">&euro; 583.60</p>
+                <p class="mb-2 price">74.10 <span>&euro;</span></p>
                 <!-- Text -->
                 <p class="card-text"></p>
                 <!-- Button -->
-                <a href="#" class="btn btn-secondary btn-block"
-                  >Dodaj u korpu</a
+                <button
+                  id="add-to-cart-btn"
+                  class="btn btn-secondary btn-block"
                 >
-              </div>
-            </div>
-            <!-- Card -->
-          </div>
-          <div class="col-sm-1 single-col">
-            <div
-              data-aos="fade-up"
-              data-aos-duration="500"
-              class="card booking-card shadow-md"
-            >
-              <!-- Card image -->
-              <div class="inner">
-                <img
-                  class="card-img-top"
-                  src="images/sat.jpg"
-                  alt="Card image cap"
-                />
-                <a href="#!">
-                  <div class="mask rgba-white-slight"></div>
-                </a>
-              </div>
-
-              <!-- Card content -->
-              <div class="card-body">
-                <!-- Title -->
-                <h4 class="card-title font-weight-bold text-gray-600">
-                  <a>Vivax sat</a>
-                </h4>
-
-                <p class="mb-2 price">&euro; 35.00</p>
-                <!-- Text -->
-                <p class="card-text"></p>
-                <!-- Button -->
-                <a href="#" class="btn btn-secondary btn-block"
-                  >Dodaj u korpu</a
-                >
-              </div>
-            </div>
-            <!-- Card -->
-          </div>
-          <div class="col-sm-1 single-col">
-            <div
-              data-aos="fade-up"
-              data-aos-duration="500"
-              class="card booking-card shadow-md"
-            >
-              <!-- Card image -->
-              <div class="inner">
-                <img
-                  class="card-img-top"
-                  src="images/sony.jpg"
-                  alt="Card image cap"
-                />
-                <a href="#!">
-                  <div class="mask rgba-white-slight"></div>
-                </a>
-              </div>
-
-              <!-- Card content -->
-              <div class="card-body">
-                <!-- Title -->
-                <h4 class="card-title font-weight-bold text-gray-600">
-                  <a>Sony Playstation 4</a>
-                </h4>
-
-                <p class="mb-2 price">&euro; 372.40</p>
-                <!-- Text -->
-                <p class="card-text"></p>
-                <!-- Button -->
-                <a href="#" class="btn btn-secondary btn-block"
-                  >Dodaj u korpu</a
-                >
-              </div>
-            </div>
-            <!-- Card -->
-          </div>
-          <div class="col-sm-1 single-col">
-            <div
-              data-aos="fade-up"
-              data-aos-duration="500"
-              class="card booking-card shadow-md"
-            >
-              <!-- Card image -->
-              <div class="inner">
-                <img
-                  class="card-img-top"
-                  src="images/joystick.jpg"
-                  alt="Card image cap"
-                />
-                <a href="#!">
-                  <div class="mask rgba-white-slight"></div>
-                </a>
-              </div>
-
-              <!-- Card content -->
-              <div class="card-body">
-                <!-- Title -->
-                <h4 class="card-title font-weight-bold text-gray-600">
-                  <a>SONY PlayStation 4 Controller</a>
-                </h4>
-
-                <p class="mb-2 price">&euro; 62.10</p>
-                <!-- Text -->
-                <p class="card-text"></p>
-                <!-- Button -->
-                <a href="#" class="btn btn-secondary btn-block"
-                  >Dodaj u korpu</a
-                >
+                  Dodaj u korpu
+                </button>
               </div>
             </div>
             <!-- Card -->
@@ -872,6 +726,8 @@
 
     <script src="js/app.js"></script>
     <script src="js/main.js"></script>
+
+    <script src="js/cart-script.js" async></script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
